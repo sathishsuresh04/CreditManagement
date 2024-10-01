@@ -23,6 +23,8 @@
   <ItemGroup Label="Microsoft">
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
+  
   </ItemGroup>
   <ItemGroup Label="VersioningAndDiagnosticTools">
     <PackageVersion Include="Asp.Versioning.Http" Version="8.1.0" />

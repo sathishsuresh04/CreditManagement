@@ -1,0 +1,38 @@
+@model IEnumerable<CreditManagement.Domain.Accounts.Account>
+
+@{
+    ViewData["Title"] = "Accounts";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="UploadJsonFile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="jsonFile">Upload JSON File</label>
+        <input type="file" name="file" class="form-control-file" id="jsonFile" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+<h3>Accounts</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Account Holder</th>
+        <th>Balance</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var account in Model)
+    {
+        <tr>
+            <td>@account.AccountHolder</td>
+            <td>@account.Balance</td>
+            <td>
+                <a asp-action="ViewTransactions" asp-route-accountId="@account.Id" class="btn btn-info">View Transactions</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

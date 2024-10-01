@@ -6,6 +6,9 @@ namespace CreditManagement.Domain.Accounts;
 
 public class Transaction: Entity, IAuditableEntity
 {
+    private Transaction()
+    {
+    }
     private Transaction(DateTime dateTime, decimal amount,
         string? description,TransactionCategory category):base(Guid.NewGuid())
     {
