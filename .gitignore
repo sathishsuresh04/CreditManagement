@@ -377,3 +377,5 @@ build_artifact
 
 # Ignore .idea directory
 .idea/
+[Bb]in/
+[Oo]bj/
