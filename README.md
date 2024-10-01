@@ -1,2 +1,2 @@
-# KreditzDashboard
-KreditzDashboard
+# CreditManagement
+CreditManagement
