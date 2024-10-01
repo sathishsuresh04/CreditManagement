@@ -1,0 +1,13 @@
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/bin/Debug/net8.0/KreditzDashboard.Domain.deps.json
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/bin/Debug/net8.0/KreditzDashboard.Domain.dll
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/bin/Debug/net8.0/KreditzDashboard.Domain.pdb
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.csproj.AssemblyReference.cache
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.AssemblyInfoInputs.cache
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.AssemblyInfo.cs
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.csproj.CoreCompileInputs.cache
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.sourcelink.json
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.dll
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/refint/KreditzDashboard.Domain.dll
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/KreditzDashboard.Domain.pdb
+/Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/KreditzDashboard.Domain/obj/Debug/net8.0/ref/KreditzDashboard.Domain.dll

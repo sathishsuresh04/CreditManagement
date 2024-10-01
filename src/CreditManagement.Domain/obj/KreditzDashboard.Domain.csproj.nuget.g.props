@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/sureshkumar/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/sureshkumar/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.10.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/Users/sureshkumar/.nuget/packages/" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSmartAnalyzers_ExceptionAnalyzer Condition=" '$(PkgSmartAnalyzers_ExceptionAnalyzer)' == '' ">/Users/sureshkumar/.nuget/packages/smartanalyzers.exceptionanalyzer/1.0.10</PkgSmartAnalyzers_ExceptionAnalyzer>
+    <PkgSerilogAnalyzer Condition=" '$(PkgSerilogAnalyzer)' == '' ">/Users/sureshkumar/.nuget/packages/seriloganalyzer/0.15.0</PkgSerilogAnalyzer>
+    <PkgRoslynator_Analyzers Condition=" '$(PkgRoslynator_Analyzers)' == '' ">/Users/sureshkumar/.nuget/packages/roslynator.analyzers/4.5.0</PkgRoslynator_Analyzers>
+    <PkgMicrosoft_VisualStudio_Threading_Analyzers Condition=" '$(PkgMicrosoft_VisualStudio_Threading_Analyzers)' == '' ">/Users/sureshkumar/.nuget/packages/microsoft.visualstudio.threading.analyzers/17.7.30</PkgMicrosoft_VisualStudio_Threading_Analyzers>
+    <PkgAsyncFixer Condition=" '$(PkgAsyncFixer)' == '' ">/Users/sureshkumar/.nuget/packages/asyncfixer/1.6.0</PkgAsyncFixer>
+  </PropertyGroup>
+</Project>
