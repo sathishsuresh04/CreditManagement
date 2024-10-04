@@ -1,5 +1,6 @@
 using CreditManagement.Application.Abstractions.Data;
 using CreditManagement.Domain.Accounts;
+using CreditManagement.Persistence.Specifications;
 using Microsoft.EntityFrameworkCore;
 
 namespace CreditManagement.Persistence.Repositories;
@@ -8,18 +9,34 @@ public sealed class AccountRepository(IDbContext dbContext)
     : GenericRepository<Account>(dbContext), IAccountRepository
 
 {
-    public async Task<Account?> GetAccountByIdWithTransactionsAsync(Guid accountId)
+    public Task<Account?> GetAccountByIdWithTransactionsAsync(Guid accountId)
     {
-        return await dbContext.Set<Account>()
+        return DbContext.Set<Account>()
             .Include(a => a.Transactions)
             .FirstOrDefaultAsync(a => a.Id == accountId);
     }
 
     public Task<List<Account>> GetAllAccountsWithTransactionsAsync()
     {
-        return  dbContext.Set<Account>()
+        return DbContext.Set<Account>()
             .Include(a => a.Transactions)
             .ToListAsync();
     }
-    
+
+ 
+    public Task<List<Account>> GetAccountsAsync()
+    {
+        return DbContext.Set<Account>()
+            .ToListAsync();
+    }
+    public  Task<Account?> GetAccountByAccountNumberAsync(string accountNumber)
+    {
+        return  DbContext.Set<Account>()
+            .Include(a => a.Transactions)
+            .FirstOrDefaultAsync(a => a.AccountNumber == accountNumber);
+    }
+    public Task<bool> AnyAsync()
+    {
+        return base.AnyAsync(new AccountSpecification());
+    }
 }

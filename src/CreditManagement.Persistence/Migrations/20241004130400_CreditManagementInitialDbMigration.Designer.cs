@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CreditManagement.Persistence.Migrations
 {
     [DbContext(typeof(CreditManagementDbContext))]
-    [Migration("20241001092035_CreditManagementInitialDbMigration")]
+    [Migration("20241004130400_CreditManagementInitialDbMigration")]
     partial class CreditManagementInitialDbMigration
     {
         /// <inheritdoc />
@@ -38,6 +38,11 @@ namespace CreditManagement.Persistence.Migrations
                         .HasColumnType("varchar(50)")
                         .HasColumnName("account_holder");
 
+                    b.Property<string>("AccountNumber")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("account_number");
+
                     b.Property<decimal>("Balance")
                         .HasColumnType("decimal(10,2)")
                         .HasColumnName("balance");
@@ -62,6 +67,10 @@ namespace CreditManagement.Persistence.Migrations
 
                     b.HasKey("Id")
                         .HasName("pk_account");
+
+                    b.HasIndex("AccountNumber")
+                        .IsUnique()
+                        .HasDatabaseName("ix_account_account_number");
 
                     b.ToTable("account", "credit_management");
                 });
@@ -96,6 +105,10 @@ namespace CreditManagement.Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("varchar(500)")
                         .HasColumnName("description");
+
+                    b.Property<bool>("IsAnomalous")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_anomalous");
 
                     b.Property<DateTime?>("ModifiedOnUtc")
                         .HasColumnType("timestamp without time zone")

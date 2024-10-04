@@ -23,6 +23,7 @@ namespace CreditManagement.Persistence.Migrations
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
+                    account_number = table.Column<string>(type: "varchar(50)", nullable: false),
                     account_holder = table.Column<string>(type: "varchar(50)", nullable: false),
                     balance = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
                     created_on_utc = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
@@ -62,6 +63,7 @@ namespace CreditManagement.Persistence.Migrations
                     date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     description = table.Column<string>(type: "varchar(500)", nullable: true),
                     amount = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    is_anomalous = table.Column<bool>(type: "boolean", nullable: false),
                     category = table.Column<int>(type: "integer", nullable: false),
                     created_on_utc = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     modified_on_utc = table.Column<DateTime>(type: "timestamp without time zone", nullable: true)
@@ -96,6 +98,13 @@ namespace CreditManagement.Persistence.Migrations
                     { 3, null, "InternalTransfer", 3 },
                     { 4, null, "Other", 4 }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "ix_account_account_number",
+                schema: "credit_management",
+                table: "account",
+                column: "account_number",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "ix_transaction_account_id",

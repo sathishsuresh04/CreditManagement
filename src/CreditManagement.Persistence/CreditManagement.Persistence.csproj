@@ -7,7 +7,7 @@
         <PackageReference Include="Humanizer"/>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\CreditManagement.Application\CreditManagement.Application.csproj" />
+        <ProjectReference Include="..\CreditManagement.Application\CreditManagement.Application.csproj"/>
     </ItemGroup>
 
 </Project>

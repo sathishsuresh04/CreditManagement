@@ -1,0 +1,52 @@
+@model CreditManagement.Application.Dtos.MonthlyReportDto
+
+@{
+    ViewData["Title"] = "Monthly Report";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Total Income: @Model.TotalIncome</p>
+<p>Total Expenses: @Model.TotalExpenses</p>
+
+<h3>Transactions by Category</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Category</th>
+        <th>Count</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var categoryCount in Model.CategoryTransactionCounts)
+    {
+        <tr>
+            <td>@categoryCount.Category</td>
+            <td>@categoryCount.Count</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<h3>Flagged Transactions</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Description</th>
+        <th>Category</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var transaction in Model.FlaggedTransactions)
+    {
+        <tr class="table-warning">
+            <td>@transaction.Date.ToString("d")</td>
+            <td>@transaction.Amount</td>
+            <td>@transaction.Description</td>
+            <td>@transaction.Category</td>
+        </tr>
+    }
+    </tbody>
+</table>

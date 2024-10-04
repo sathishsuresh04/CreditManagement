@@ -1,55 +1,62 @@
-
-
-using CreditManagement.Domain.Accounts;
+using CreditManagement.Application.Accounts.CreateAccountTransactions;
+using CreditManagement.Application.Accounts.GetAllAccounts;
+using CreditManagement.Application.Transactions.GetAccountTransactions;
+using CreditManagement.Application.Transactions.GetMonthlyTransactionReport;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CreditManagement.Controllers;
 
-public class AccountController(IAccountRepository accountRepository) : Controller
+public class AccountController(IMediator mediator) : Controller
 {
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> IndexAsync()
     {
-        var accounts = await accountRepository.GetAllAccountsWithTransactionsAsync();
-        return View(accounts);
+        var result = await mediator.Send(new GetAllAccountsQuery());
+        if (result.IsSuccess)
+        {
+            return View(result.Value);
+        }
+
+        return BadRequest(result.Error);
+
     }
 
     [HttpPost]
     public async Task<IActionResult> UploadJsonFileAsync()
     {
         var file = Request.Form.Files.FirstOrDefault();
-        if (file == null || file.Length == 0)
-        {
-            return BadRequest("No file uploaded.");
-        }
+        if (file == null || file.Length == 0) return BadRequest("No file uploaded.");
 
         using var stream = new StreamReader(file.OpenReadStream());
         var jsonData = await stream.ReadToEndAsync();
-        // var accounts = JsonConvert.DeserializeObject<List<Account>>(jsonData);
-        //
-        // foreach (var account in accounts)
-        // {
-        //     if (accountRepository.GetAll().Any(a => a.AccountId == account.AccountId))
-        //     {
-        //         var existingAccount = await accountRepository.GetByIdAsync(account.AccountId);
-        //         existingAccount.Transactions.AddRange(account.Transactions);
-        //     }
-        //     else
-        //     {
-        //         await accountRepository.AddAsync(account);
-        //     }
-        // }
+        var command = new CreateAccountTransactionsCommand(jsonData);
+        var result = await mediator.Send(command);
 
-        return RedirectToAction(nameof(Index));
+        if (result.IsSuccess) return RedirectToAction("Index");
+
+        return BadRequest(result.Error);
     }
 
     public async Task<IActionResult> ViewTransactionsAsync(Guid accountId)
     {
-        var account = await accountRepository.GetAccountByIdWithTransactionsAsync(accountId);
-        if (account == null)
+        var result = await mediator.Send(new GetAccountTransactionsQuery(accountId));
+        if (result.IsSuccess)
         {
-            return NotFound();
+            return View(result.Value);
         }
 
-        return View(account.Transactions);
+        return BadRequest(result.Error);
+    }
+    
+    [HttpGet("{accountId}/{month}/{year}")]
+    public async Task<IActionResult> ReportsAsync(Guid accountId, int month, int year, CancellationToken cancellationToken)
+    {
+        var result = await mediator.Send(new GetMonthlyTransactionReportQuery(accountId,month,year), cancellationToken);
+        if (result.IsSuccess)
+        {
+            return View(result.Value);
+        }
+
+        return BadRequest(result.Error);
     }
 }

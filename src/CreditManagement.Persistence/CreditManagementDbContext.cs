@@ -5,6 +5,7 @@ using CreditManagement.Application.Core.Extensions;
 using CreditManagement.Domain.Abstractions;
 using CreditManagement.Domain.Accounts;
 using CreditManagement.Domain.Primitives;
+using CreditManagement.Domain.Transactions;
 using CreditManagement.Persistence.Common;
 using CreditManagement.Persistence.Extensions;
 using MediatR;
@@ -26,29 +27,26 @@ public class CreditManagementDbContext(
 {
     private readonly PostgresDbOptions _postgresDbOptions =
         configuration.GetOptions<PostgresDbOptions>(nameof(PostgresDbOptions));
+
     public DbSet<Account> Accounts => Set<Account>();
     public DbSet<Transaction> Transactions => Set<Transaction>();
 
     /// <inheritdoc />
     public new DbSet<TEntity> Set<TEntity>()
-    where TEntity : Entity
+        where TEntity : Entity
     {
         return base.Set<TEntity>();
     }
 
-
-    /// <inheritdoc />
-    public async Task<TEntity?> GetBydIdAsync<TEntity>(Guid id)
-    where TEntity : Entity
+    public async Task<TEntity?> GetByIdAsync<TEntity>(Guid id) where TEntity : Entity
     {
-        return id == Guid.Empty ?
-                   null :
-                   await Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id);
+        return id == Guid.Empty ? null : await Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id);
     }
+    
 
     /// <inheritdoc />
     public void Insert<TEntity>(TEntity entity)
-    where TEntity : Entity
+        where TEntity : Entity
     {
         Set<TEntity>().Add(entity);
     }
@@ -56,15 +54,18 @@ public class CreditManagementDbContext(
 
     /// <inheritdoc />
     public void InsertRange<TEntity>(IReadOnlyCollection<TEntity> entities)
-    where TEntity : Entity
+        where TEntity : Entity
     {
         Set<TEntity>().AddRange(entities);
     }
-
+    public void Update<TEntity>(TEntity entity) where TEntity : Entity
+    {
+        Set<TEntity>().Update(entity);
+    }
 
     /// <inheritdoc />
     public new void Remove<TEntity>(TEntity entity)
-    where TEntity : Entity
+        where TEntity : Entity
     {
         Set<TEntity>().Remove(entity);
     }
@@ -101,10 +102,7 @@ public class CreditManagementDbContext(
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
         modelBuilder.ApplyUtcDateTimeConverter();
-        if (createEnumLookupTables)
-        {
-            modelBuilder.CreateEnumLookupTable(true);
-        }
+        if (createEnumLookupTables) modelBuilder.CreateEnumLookupTable(true);
 
         base.OnModelCreating(modelBuilder);
     }
@@ -143,9 +141,9 @@ public class CreditManagementDbContext(
 
         foreach (var referenceEntry in entityEntry.References.Where(
                      r => r.TargetEntry is
-                          {
-                              State: EntityState.Deleted,
-                          }))
+                     {
+                         State: EntityState.Deleted
+                     }))
         {
             if (referenceEntry.TargetEntry == null) continue;
             referenceEntry.TargetEntry.State = EntityState.Unchanged;

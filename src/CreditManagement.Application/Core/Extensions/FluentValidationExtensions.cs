@@ -1,5 +1,5 @@
-using FluentValidation;
 using CreditManagement.Domain.Primitives;
+using FluentValidation;
 
 namespace CreditManagement.Application.Core.Extensions;
 

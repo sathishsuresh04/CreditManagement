@@ -6,7 +6,7 @@ namespace CreditManagement.Application.Core.Extensions;
 public static class ConfigurationExtensions
 {
     public static TModel GetOptions<TModel>(this IConfiguration configuration, string section)
-    where TModel : new()
+        where TModel : new()
     {
         var model = new TModel();
         configuration.GetSection(section).Bind(model);
@@ -40,7 +40,7 @@ public static class ConfigurationExtensions
     /// <typeparam name="TModel">The type of options to register.</typeparam>
     /// <param name="service">The IServiceCollection to add the services to.</param>
     public static void AddValidateOptions<TModel>(this IServiceCollection service)
-    where TModel : class, new()
+        where TModel : class, new()
     {
         service.AddOptions<TModel>()
             .BindConfiguration(typeof(TModel).Name)
@@ -48,5 +48,4 @@ public static class ConfigurationExtensions
 
         service.AddSingleton(x => x.GetRequiredService<IOptions<TModel>>().Value);
     }
-
 }

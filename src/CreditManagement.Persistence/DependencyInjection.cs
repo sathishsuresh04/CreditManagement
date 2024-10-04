@@ -2,6 +2,7 @@ using Ardalis.GuardClauses;
 using CreditManagement.Application.Abstractions.Data;
 using CreditManagement.Application.Core.Extensions;
 using CreditManagement.Domain.Accounts;
+using CreditManagement.Domain.Transactions;
 using CreditManagement.Persistence.Common;
 using CreditManagement.Persistence.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -35,11 +36,9 @@ public static class DependencyInjection
                         sqlOptions =>
                         {
                             if (!string.IsNullOrWhiteSpace(postgresDbOptions.DefaultSchema))
-                            {
                                 sqlOptions.MigrationsHistoryTable(
                                     "__efmigrationshistory",
                                     postgresDbOptions.DefaultSchema);
-                            }
 
                             //  sqlOptions.EnableRetryOnFailure(3, TimeSpan.FromSeconds(10), null);
                             sqlOptions.CommandTimeout(postgresDbOptions.CommandTimeoutInSeconds);
@@ -53,6 +52,8 @@ public static class DependencyInjection
         services.AddScoped<IUnitOfWork>(
             serviceProvider => serviceProvider.GetRequiredService<CreditManagementDbContext>());
         services.AddScoped<IAccountRepository, AccountRepository>();
+        services.AddScoped<ITransactionRepository, TransactionRepository>();
+        
         return services;
     }
 
@@ -71,7 +72,7 @@ public static class DependencyInjection
     }
 
     private static async Task MigrateDatabaseAsync<TContext>(IServiceProvider serviceProvider)
-    where TContext : DbContext, IDbContext
+        where TContext : DbContext, IDbContext
     {
         using var scope = serviceProvider.CreateScope();
 

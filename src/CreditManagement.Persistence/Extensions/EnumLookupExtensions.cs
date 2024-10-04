@@ -48,13 +48,11 @@ public static class EnumLookupExtensions
             }
 
             if (createForeignKeys)
-            {
                 modelBuilder.Entity(entityType.Name)
                     .HasOne(concreteType)
                     .WithMany()
                     .HasPrincipalKey(nameof(EnumLookup<Enum>.Value))
                     .HasForeignKey(property.Name);
-            }
         }
     }
 }

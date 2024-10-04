@@ -9,10 +9,7 @@
         <PackageReference Include="Serilog"/>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\CreditManagement.Domain\CreditManagement.Domain.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Accounts\" />
+        <ProjectReference Include="..\CreditManagement.Domain\CreditManagement.Domain.csproj"/>
     </ItemGroup>
 
 </Project>

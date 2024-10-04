@@ -1,4 +1,5 @@
 using CreditManagement.Domain.Accounts;
+using CreditManagement.Domain.Transactions;
 using CreditManagement.Persistence.Common;
 using Humanizer;
 using Microsoft.EntityFrameworkCore;

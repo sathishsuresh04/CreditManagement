@@ -8,6 +8,6 @@ namespace CreditManagement.Application.Abstractions.Messaging;
 /// </summary>
 /// <typeparam name="TDomainEvent">The domain event type.</typeparam>
 public interface IDomainEventHandler<in TDomainEvent> : INotificationHandler<TDomainEvent>
-where TDomainEvent : IDomainEvent
+    where TDomainEvent : IDomainEvent
 {
 }

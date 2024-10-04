@@ -1,5 +1,5 @@
-using FluentValidation.Results;
 using CreditManagement.Domain.Primitives;
+using FluentValidation.Results;
 
 namespace CreditManagement.Application.Core.Exceptions;
 

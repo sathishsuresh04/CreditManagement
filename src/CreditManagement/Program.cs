@@ -54,8 +54,8 @@ internal static class Program
             app.UseAuthorization();
 
             app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                "default",
+                "{controller=Account}/{action=Index}/{id?}");
 
             await app.RunAsync();
         }

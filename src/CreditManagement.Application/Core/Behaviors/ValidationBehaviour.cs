@@ -3,13 +3,12 @@ using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Exceptions_ValidationException = CreditManagement.Application.Core.Exceptions.ValidationException;
-using ValidationException = CreditManagement.Application.Core.Exceptions.ValidationException;
 
 namespace CreditManagement.Application.Core.Behaviors;
 
 internal sealed class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-where TRequest : class, IRequest<TResponse>
-where TResponse : class
+    where TRequest : class, IRequest<TResponse>
+    where TResponse : class
 {
     private readonly IEnumerable<IValidator<TRequest>> _validators;
 

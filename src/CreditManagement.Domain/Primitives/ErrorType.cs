@@ -7,5 +7,5 @@ public enum ErrorType
     NotFound = 2,
     Conflict = 4,
     Unauthorized = 5,
-    Forbidden = 6,
+    Forbidden = 6
 }

@@ -23,18 +23,16 @@ internal sealed class SwaggerDefaultValues : IOperationFilter
         // Remove unsupported response content types from the operation
         foreach (var responseType in context.ApiDescription.SupportedResponseTypes)
         {
-            var responseKey = responseType.IsDefaultResponse ?
-                                  "default" :
-                                  responseType.StatusCode.ToString(CultureInfo.InvariantCulture);
+            var responseKey = responseType.IsDefaultResponse
+                ? "default"
+                : responseType.StatusCode.ToString(CultureInfo.InvariantCulture);
             var response = operation.Responses[responseKey];
 
             foreach (var contentType in response.Content.Keys)
-            {
                 if (responseType.ApiResponseFormats.All(
                         x =>
                             !string.Equals(x.MediaType, contentType, StringComparison.OrdinalIgnoreCase)))
                     response.Content.Remove(contentType);
-            }
         }
 
         // Update parameter descriptions and defaults

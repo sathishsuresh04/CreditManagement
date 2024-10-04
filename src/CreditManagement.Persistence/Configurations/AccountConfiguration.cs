@@ -12,7 +12,12 @@ internal sealed class AccountConfiguration : IEntityTypeConfiguration<Account>
     {
         builder.ToTable(nameof(Account).Singularize().Underscore());
         builder.HasKey(account => account.Id);
-        builder.Property(account => account.AccountHolder).HasColumnType(EfConstants.ColumnTypes.NormalText).IsRequired();
+        builder.Property(account => account.AccountNumber).HasColumnType(EfConstants.ColumnTypes.NormalText)
+            .IsRequired();
+        builder.HasIndex(account => account.AccountNumber)
+            .IsUnique();
+        builder.Property(account => account.AccountHolder).HasColumnType(EfConstants.ColumnTypes.NormalText)
+            .IsRequired();
         builder.Property(account => account.Balance)
             .HasColumnType(EfConstants.ColumnTypes.DecimalTenTwo)
             .IsRequired();

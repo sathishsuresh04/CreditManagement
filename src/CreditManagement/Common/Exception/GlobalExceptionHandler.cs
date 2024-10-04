@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 namespace CreditManagement.Common.Exception;
 
 public class GlobalExceptionHandler(IHostEnvironment environment)
-
     : IExceptionHandler
 
 {
@@ -22,62 +21,58 @@ public class GlobalExceptionHandler(IHostEnvironment environment)
             not
             {
             } problemDetailsService)
-        {
             return true;
-        }
 
         (string Detail, string Title, int StatusCode) details = exception switch
-                                                                {
-                                                                    ValidationException validationException=>
-                                                                        (
-                                                                            string.Join(
-                                                                                ", ",
-                                                                                validationException.Errors.Select(e => e.Message)),
-                                                                            exception.GetType().Name,
-                                                                            httpContext.Response.StatusCode =
-                                                                                StatusCodes.Status400BadRequest
-                                                                        ),
-                                                                    DomainException domainException => (
-
-                                                                                domainException.Error.Message,
-                                                                            domainException.GetType().Name,
-                                                                            httpContext.Response.StatusCode =
-                                                                                StatusCodes.Status400BadRequest
-                                                                        ),
-                                                                    DbUpdateConcurrencyException =>
-                                                                        (
-                                                                            exception.Message,
-                                                                            exception.GetType().Name,
-                                                                            httpContext.Response.StatusCode =
-                                                                                StatusCodes.Status409Conflict
-                                                                        ),
-                                                                    _ =>
-                                                                        (
-                                                                            exception.Message,
-                                                                            exception.GetType().Name,
-                                                                            httpContext.Response.StatusCode =
-                                                                                StatusCodes
-                                                                                    .Status500InternalServerError
-                                                                        ),
-                                                                };
+        {
+            ValidationException validationException =>
+            (
+                string.Join(
+                    ", ",
+                    validationException.Errors.Select(e => e.Message)),
+                exception.GetType().Name,
+                httpContext.Response.StatusCode =
+                    StatusCodes.Status400BadRequest
+            ),
+            DomainException domainException => (
+                domainException.Error.Message,
+                domainException.GetType().Name,
+                httpContext.Response.StatusCode =
+                    StatusCodes.Status400BadRequest
+            ),
+            DbUpdateConcurrencyException =>
+            (
+                exception.Message,
+                exception.GetType().Name,
+                httpContext.Response.StatusCode =
+                    StatusCodes.Status409Conflict
+            ),
+            _ =>
+            (
+                exception.Message,
+                exception.GetType().Name,
+                httpContext.Response.StatusCode =
+                    StatusCodes
+                        .Status500InternalServerError
+            )
+        };
 
 
         var problem = new ProblemDetailsContext
-                      {
-                          HttpContext = httpContext,
-                          ProblemDetails =
-                          {
-                              Title = details.Title, Detail =
-                                                                            details.Detail, Status = details.StatusCode,
-                          },
-                      };
+        {
+            HttpContext = httpContext,
+            ProblemDetails =
+            {
+                Title = details.Title, Detail =
+                    details.Detail,
+                Status = details.StatusCode
+            }
+        };
 
         if (environment.IsDevelopment())
-        {
             problem.ProblemDetails.Extensions.Add(
                 "exception",
                 exception.ToString());
-        }
 
         await problemDetailsService.WriteAsync(problem);
 

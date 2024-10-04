@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CreditManagement.Persistence.Repositories;
 
 public abstract class GenericRepository<TEntity>
-where TEntity : Entity
+    where TEntity : Entity
 {
     /// <summary>
     ///     Initializes a new instance of the <see cref="GenericRepository{TEntity}" /> class.
@@ -29,13 +29,14 @@ where TEntity : Entity
     /// <returns>The maybe instance that may contain the entity with the specified identifier.</returns>
     public async Task<TEntity?> GetByIdAsync(Guid id)
     {
-        return await DbContext.GetBydIdAsync<TEntity>(id);
+        return await DbContext.GetByIdAsync<TEntity>(id);
     }
 
     /// <summary>
     ///     Inserts the specified entity into the database.
     /// </summary>
     /// <param name="entity">The entity to be inserted into the database.</param>
+    /// <param name="cancellationToken"></param>
     public void Insert(TEntity entity)
     {
         DbContext.Insert(entity);

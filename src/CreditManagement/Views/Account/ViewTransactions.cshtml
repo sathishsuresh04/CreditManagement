@@ -1,0 +1,31 @@
+@model IEnumerable<CreditManagement.Application.Dtos.TransactionResponseDto>
+
+@{
+ViewData["Title"] = "Transactions";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Is Anomalous Transaction</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var transaction in Model)
+    {
+    <tr class="@(transaction.IsFlagged ? "table-warning" : "")">
+        <td>@transaction.Description</td>
+        <td>@transaction.Date.ToString("d")</td>
+        <td>@transaction.Amount</td>
+        <td>@transaction.Category</td>
+        <td>@transaction.IsFlagged</td>
+    </tr>
+    }
+    </tbody>
+</table>

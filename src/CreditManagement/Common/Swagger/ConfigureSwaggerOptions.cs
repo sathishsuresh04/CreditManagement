@@ -48,7 +48,7 @@ internal sealed class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGe
     {
         var text = new StringBuilder("This application with OpenAPI, Swashbuckle, and API versioning.");
 
-        var versionInfo = new OpenApiInfo {Version = description.ApiVersion.ToString(),};
+        var versionInfo = new OpenApiInfo { Version = description.ApiVersion.ToString() };
 
         if (description.IsDeprecated) text.Append(DeprecatedText);
 
@@ -59,11 +59,9 @@ internal sealed class ConfigureSwaggerOptions : IConfigureNamedOptions<SwaggerGe
             if (policy.Date is
                 {
                 } when)
-            {
                 text.Append(" The API will be sunset on ")
                     .Append(when.Date.ToShortDateString())
                     .Append('.');
-            }
 
             if (policy.HasLinks)
             {

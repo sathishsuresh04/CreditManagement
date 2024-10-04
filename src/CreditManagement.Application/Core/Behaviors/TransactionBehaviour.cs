@@ -5,8 +5,8 @@ using MediatR;
 namespace CreditManagement.Application.Core.Behaviors;
 
 internal sealed class TransactionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-where TRequest : class, IRequest<TResponse>
-where TResponse : class
+    where TRequest : class, IRequest<TResponse>
+    where TResponse : class
 {
     private readonly IUnitOfWork _unitOfWork;
 

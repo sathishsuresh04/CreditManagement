@@ -25,11 +25,12 @@ public static class Extensions
         params Assembly[] assemblies
     )
     {
-        var scanAssemblies = assemblies.Length != 0 ?
-                                 assemblies :
-                                 [
-                                     Assembly.GetExecutingAssembly(),
-                                 ];
+        var scanAssemblies = assemblies.Length != 0
+            ? assemblies
+            :
+            [
+                Assembly.GetExecutingAssembly()
+            ];
 
         services.AddEndpointsApiExplorer();
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();

@@ -1,4 +1,5 @@
-@model IEnumerable<CreditManagement.Domain.Accounts.Account>
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<CreditManagement.Application.Dtos.AccountResponseDto>
 
 @{
     ViewData["Title"] = "Accounts";
@@ -31,6 +32,7 @@
             <td>@account.Balance</td>
             <td>
                 <a asp-action="ViewTransactions" asp-route-accountId="@account.Id" class="btn btn-info">View Transactions</a>
+                <a asp-action="Reports" asp-route-accountId="@account.Id" asp-route-year="2023" asp-route-month="10" class="btn btn-secondary">Monthly Report</a>
             </td>
         </tr>
     }

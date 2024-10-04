@@ -12,6 +12,5 @@ public static class DomainErrors
         public static Error NotFound => Error.NotFound(
             "Account.NotFound",
             "The Account with the specified identifier was not found.");
-        
     }
 }

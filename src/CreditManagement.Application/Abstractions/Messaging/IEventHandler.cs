@@ -7,6 +7,6 @@ namespace CreditManagement.Application.Abstractions.Messaging;
 /// </summary>
 /// <typeparam name="TEvent">The event type.</typeparam>
 public interface IEventHandler<in TEvent> : INotificationHandler<TEvent>
-where TEvent : INotification
+    where TEvent : INotification
 {
 }

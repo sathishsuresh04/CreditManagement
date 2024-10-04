@@ -2,7 +2,6 @@ using CreditManagement.Domain.Primitives;
 
 namespace CreditManagement.Domain.Exceptions;
 
-
 // ReSharper disable once ClassNeverInstantiated.Global
 #pragma warning disable RCS1194
 public class DomainException : Exception

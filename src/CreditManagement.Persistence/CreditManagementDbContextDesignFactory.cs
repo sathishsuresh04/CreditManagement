@@ -28,14 +28,12 @@ public class CreditManagementDbContextDesignFactory : IDesignTimeDbContextFactor
                 sqlOptions =>
                 {
                     if (!string.IsNullOrWhiteSpace(defaultSchema))
-                    {
                         sqlOptions.MigrationsHistoryTable(
                             "__efmigrationshistory",
                             defaultSchema);
-                    }
                 })
             .UseSnakeCaseNamingConvention();
 
-        return new CreditManagementDbContext(builder.Options, configuration, null!, null!,true);
+        return new CreditManagementDbContext(builder.Options, configuration, null!, null!, true);
     }
 }

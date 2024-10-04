@@ -4,7 +4,7 @@ using CreditManagement.Domain.Primitives;
 namespace CreditManagement.Persistence.Specifications;
 
 public abstract class Specification<TEntity>
-where TEntity : Entity
+    where TEntity : Entity
 {
     /// <summary>
     ///     Converts the specification to an expression predicate.
