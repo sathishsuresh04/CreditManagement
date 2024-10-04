@@ -11,8 +11,8 @@ internal sealed class GetMonthlyTransactionReportQueryHandler(ITransactionReposi
     {
         var transactions=await transactionRepository.GetAccountTransactionsByMonthAndYearAsync(request.AccountId,request.Month,request.Year);
         var enumerable = transactions.ToList();
-        var totalIncome = enumerable.Where(t => t.Category == TransactionCategory.Income).Sum(t => t.Amount);
-        var totalExpenses = enumerable.Where(t => t.Category == TransactionCategory.Expense).Sum(t => t.Amount);
+        var totalIncome = enumerable.Where(t => t is { Category: TransactionCategory.Income, IsAnomalous: false }).Sum(t => t.Amount);
+        var totalExpenses = enumerable.Where(t => t is { Category: TransactionCategory.Expense, IsAnomalous: false }).Sum(t => t.Amount);
 
         var categoryTransactionCounts = enumerable.GroupBy(t => t.Category)
             .Select(g => new CategoryTransactionCount(g.Key.ToString(), g.Count())).ToList();

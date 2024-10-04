@@ -10,130 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a31711-1b4f-4eb9-b984-485915f18664" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Accounts/CreateAccountTransactions/AccountDtoValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Accounts/CreateAccountTransactions/CreateAccountTransactionsCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Accounts/CreateAccountTransactions/CreateAccountTransactionsCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Accounts/CreateAccountTransactions/CreateAccountTransactionsCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Accounts/CreateAccountTransactions/TransactionDtoValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Accounts/GetAllAccounts/GetAllAccountsQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Accounts/GetAllAccounts/GetAllAccountsQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Dtos/AccountRequestDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Dtos/AccountResponseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Dtos/MonthlyReportDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Dtos/TransactionDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Dtos/TransactionResponseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetAccountTransactions/GetAccountTransactionsQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetAccountTransactions/GetAccountTransactionsQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Transactions/ITransactionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/TransactionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Specifications/AccountSpecification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreditManagement/Views/Account/Reports.cshtml" afterDir="false" />
+    <list default="true" id="f1a31711-1b4f-4eb9-b984-485915f18664" name="Changes" comment="fix: inital implemenation version">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CreditManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CreditManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuget.config" beforeDir="false" afterPath="$PROJECT_DIR$/nuget.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Common/IDateTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Common/IDateTime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Data/IDataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Data/IDataSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Data/IDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Data/IDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Data/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Data/IUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/ICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/ICommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/ICommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IDomainEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IDomainEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IIntegrationEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IIntegrationEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IIntegrationEventPublisher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IIntegrationEventPublisher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Abstractions/Messaging/IQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Behaviors/TransactionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Behaviors/TransactionBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Behaviors/ValidationBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Behaviors/ValidationBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Errors/ValidationErrors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Errors/ValidationErrors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Exceptions/ValidationException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Exceptions/ValidationException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Extensions/ConfigurationExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Extensions/ConfigurationExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Extensions/FluentValidationExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Core/Extensions/FluentValidationExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/CreditManagement.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/CreditManagement.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/CreateTransactions/CreateTransactions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Abstractions/IAuditableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Abstractions/IAuditableEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Abstractions/ISoftDeletableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Abstractions/ISoftDeletableEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Accounts/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Accounts/Account.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Accounts/IAccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Accounts/IAccountRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Accounts/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Transactions/Transaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Accounts/TransactionCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Transactions/TransactionCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Errors/DomainErrors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Errors/DomainErrors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Events/IDomainEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Events/IDomainEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Exceptions/DomainException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Exceptions/DomainException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/AggregateRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/AggregateRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/Error.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/ErrorType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/ErrorType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/ValueObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Domain/Primitives/ValueObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Common/MachineDateTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Common/MachineDateTime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/CreditManagement.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/CreditManagement.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Emails/EmailOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Emails/EmailOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Emails/EmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Emails/EmailService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Messaging/IntegrationEventPublisher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Messaging/IntegrationEventPublisher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Messaging/MessageBrokerOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Infrastructure/Messaging/MessageBrokerOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Common/EfConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Common/EfConstants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Common/PostgresDbOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Common/PostgresDbOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Configurations/AccountConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Configurations/AccountConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Configurations/TransactionConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Configurations/TransactionConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/CreditManagement.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/CreditManagement.Persistence.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/CreditManagementDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/CreditManagementDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/CreditManagementDbContextDesignFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/CreditManagementDbContextDesignFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Extensions/EnumLookupExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Extensions/EnumLookupExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Migrations/20241001092035_CreditManagementInitialDbMigration.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Migrations/20241001092035_CreditManagementInitialDbMigration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Migrations/CreditManagementDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/AccountRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/AccountRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/GenericRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Specifications/Specification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Specifications/Specification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/EndpointConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/EndpointConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/Exception/GlobalExceptionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/Exception/GlobalExceptionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/Minimal/EndpointConventionBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/Minimal/EndpointConventionBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/ConfigureSwaggerOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/ConfigureSwaggerOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/Extension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/Extension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/Filters/IgnoreReadOnlySchemaFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/Filters/IgnoreReadOnlySchemaFilter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/Filters/SwaggerDefaultValues.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/Swagger/Filters/SwaggerDefaultValues.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Common/Versioning/VersioningExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Common/Versioning/VersioningExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Controllers/AccountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Controllers/HomeController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/CreditManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/CreditManagement.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Models/ErrorViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Pages/Account/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/Account/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Pages/Account/ViewTransactions.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/Account/ViewTransactions.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/Home/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/Home/Privacy.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/Error.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/_Layout.cshtml.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/_ValidationScriptsPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/_ViewImports.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Views/_ViewStart.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery-validation/dist/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery-validation/dist/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery/dist/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Directory.Build.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Directory.Build.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +224,7 @@
       <workItem from="1727768854286" duration="3543000" />
       <workItem from="1727773919499" duration="557000" />
       <workItem from="1727774773535" duration="3542000" />
-      <workItem from="1728022963006" duration="26075000" />
+      <workItem from="1728022963006" duration="26320000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial draft version">
       <option name="closed" value="true" />
@@ -387,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727777030576</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: inital implemenation version">
+      <option name="closed" value="true" />
+      <created>1728060327543</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060327543</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +301,8 @@
     <MESSAGE value="fix: modified gitignore" />
     <MESSAGE value="fix: removed bin and obj" />
     <MESSAGE value="fix: added migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: added migrations" />
+    <MESSAGE value="fix: inital implemenation version" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: inital implemenation version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
