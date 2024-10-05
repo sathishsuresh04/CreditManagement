@@ -10,15 +10,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a31711-1b4f-4eb9-b984-485915f18664" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Domain.Tests/AccountTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Domain.Tests/TransactionTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Persistence.Tests/AccountRepositoryTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Shared.Tests/Fixure/AccountTestFixture.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Shared.Tests/Fixure/TransactionTestFixture.cs" afterDir="false" />
+    <list default="true" id="f1a31711-1b4f-4eb9-b984-485915f18664" name="Changes" comment="feat: README.md is updated">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CreditManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CreditManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreditManagement.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CreditManagement.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/TransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditManagement/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement/Controllers/AccountController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +47,9 @@
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.config/dotnet-tools.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/CreditManagement.Domain/Accounts/Account.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86f8ac285084484da0b538d2c421787227c00/d3/d768029a/SubstituteExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/23b393789bb834fac8f4c285f7e317cf0a0b42874eedab1321366c175116c/ArgumentException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_8_recommended.globalconfig" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevelglobalization_8_none.globalconfig" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -191,7 +188,7 @@
       <workItem from="1727773919499" duration="557000" />
       <workItem from="1727774773535" duration="3542000" />
       <workItem from="1728022963006" duration="30088000" />
-      <workItem from="1728128302106" duration="2843000" />
+      <workItem from="1728128302106" duration="5750000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial draft version">
       <option name="closed" value="true" />
@@ -249,7 +246,31 @@
       <option name="project" value="LOCAL" />
       <updated>1728060758502</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: unit testcases are added">
+      <option name="closed" value="true" />
+      <created>1728133325522</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728133325522</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: test projects are added">
+      <option name="closed" value="true" />
+      <created>1728133344064</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728133344064</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: README.md is updated">
+      <option name="closed" value="true" />
+      <created>1728135341122</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728135341122</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +299,10 @@
     <MESSAGE value="fix: added migrations" />
     <MESSAGE value="fix: inital implemenation version" />
     <MESSAGE value="fix: transaction category is updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: transaction category is updated" />
+    <MESSAGE value="feat: unit testcases are added" />
+    <MESSAGE value="feat: test projects are added" />
+    <MESSAGE value="feat: README.md is updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: README.md is updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -292,13 +316,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs</url>
-          <line>12</line>
+          <line>16</line>
           <properties documentPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="750" />
+              <option value="794" />
             </startOffsets>
             <endOffsets>
-              <option value="789" />
+              <option value="833" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="22" />

@@ -33,6 +33,12 @@ public class AccountController(IMediator mediator) : Controller
         return BadRequest(result.Error);
     }
 
+    //TODO : It should go into its own controller when we expand
+    /// <summary>
+    /// Retrieves a list of transactions for a specific account and returns the result as a view.
+    /// </summary>
+    /// <param name="accountId">The unique identifier of the account whose transactions are to be retrieved.</param>
+    /// <returns>An <see cref="IActionResult"/> representing the result of the operation.</returns>
     public async Task<IActionResult> ViewTransactionsAsync(Guid accountId)
     {
         var result = await mediator.Send(new GetAccountTransactionsQuery(accountId));
@@ -40,7 +46,15 @@ public class AccountController(IMediator mediator) : Controller
 
         return BadRequest(result.Error);
     }
-
+    //TODO : It should go into its own controller when we expand
+    /// <summary>
+    /// Generates a monthly transaction report for a specific account for the given month and year.
+    /// </summary>
+    /// <param name="accountId">The unique identifier of the account for which the report is generated.</param>
+    /// <param name="month">The month for which the report is generated.</param>
+    /// <param name="year">The year for which the report is generated.</param>
+    /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
+    /// <returns>An <see cref="IActionResult"/> containing the monthly transaction report.</returns>
     [HttpGet("{accountId}/{month}/{year}")]
     public async Task<IActionResult> ReportsAsync(Guid accountId, int month, int year,
         CancellationToken cancellationToken)
