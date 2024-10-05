@@ -93,7 +93,8 @@ To handle millions of transactions across thousands of accounts:
     - Use log management solutions (e.g., ELK stack or Grafana, Loki, Prometheus stack) for security monitoring and incident response.
 
 ## Getting Started
-1. Clone the repository from https://github.com/sathishsuresh04/CreditManagement.
+1. Clone the repository from https://github.com/sathishsuresh04/CreditManagement
+2. Open it in using Vs code ,Visual studio or Jetbrains Rider
 2. Update the connection string in `appsettings.json`:
 
 ```json
