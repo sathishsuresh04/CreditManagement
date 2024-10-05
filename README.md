@@ -107,7 +107,7 @@ To handle millions of transactions across thousands of accounts:
 ```
 
 3. Run the application.
-4. Upload a JSON file containing transaction data.
+4. Upload a JSON file containing transaction data. [AccountsTransactions.json](Data/AccountsTransactions.json)
 5. View the account details and monthly reports.
 
 ## License

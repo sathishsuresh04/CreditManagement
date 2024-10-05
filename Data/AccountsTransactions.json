@@ -1,0 +1,143 @@
+[
+  {
+    "accountNumber": "ACC123456",
+    "accountHolder": "John Doe",
+    "balance": 50000,
+    "transactions": [
+      {
+        "date": "2023-10-01T12:00:00Z",
+        "description": "Salary",
+        "amount": 20000
+      },
+      {
+        "date": "2023-10-05T14:00:00Z",
+        "description": "Groceries",
+        "amount": 150
+      },
+      {
+        "date": "2023-10-10T09:30:00Z",
+        "description": "Transfer",
+        "amount": 30000
+      },
+      {
+        "date": "2023-10-10T09:30:00Z",
+        "description": "Transfer",
+        "amount": 30000
+      },
+      {
+        "date": "2023-10-12T18:00:00Z",
+        "description": "Rent",
+        "amount": 8000
+      },
+      {
+        "date": "2023-10-15T16:00:00Z",
+        "description": "Coffee",
+        "amount": 70
+      },
+      {
+        "date": "2023-10-20T11:00:00Z",
+        "description": "Salary",
+        "amount": 20000
+      },
+      {
+        "date": "2023-10-25T08:00:00Z",
+        "description": "Utilities",
+        "amount": 2500
+      }
+    ]
+  },
+  {
+    "accountNumber": "ACC987654",
+    "accountHolder": "Jane Smith",
+    "balance": 75000,
+    "transactions": [
+      {
+        "date": "2023-10-02T10:00:00Z",
+        "description": "Salary",
+        "amount": 25000
+      },
+      {
+        "date": "2023-10-04T15:00:00Z",
+        "description": "Shopping",
+        "amount": 300
+      },
+      {
+        "date": "2023-10-06T13:00:00Z",
+        "description": "Restaurant",
+        "amount": 120
+      },
+      {
+        "date": "2023-10-11T14:00:00Z",
+        "description": "Loan Payment",
+        "amount": 9500
+      },
+      {
+        "date": "2023-10-14T12:00:00Z",
+        "description": "Transfer",
+        "amount": 11000
+      },
+      {
+        "date": "2023-10-16T17:00:00Z",
+        "description": "Movie",
+        "amount": 60
+      },
+      {
+        "date": "2023-10-18T19:00:00Z",
+        "description": "Books",
+        "amount": 400
+      },
+      {
+        "date": "2023-10-22T13:30:00Z",
+        "description": "Gift",
+        "amount": 5000
+      }
+    ]
+  },
+  {
+    "accountNumber": "ACC135792",
+    "accountHolder": "Alice Johnson",
+    "balance": 100000,
+    "transactions": [
+      {
+        "date": "2023-10-03T08:30:00Z",
+        "description": "Salary",
+        "amount": 30000
+      },
+      {
+        "date": "2023-10-07T10:00:00Z",
+        "description": "Transfer",
+        "amount": 20000
+      },
+      {
+        "date": "2023-10-09T12:00:00Z",
+        "description": "Shopping",
+        "amount": 7000
+      },
+      {
+        "date": "2023-10-13T16:00:00Z",
+        "description": "Rent",
+        "amount": 15000
+      },
+      {
+        "date": "2023-10-17T09:30:00Z",
+        "description": "Transfer",
+        "amount": 15000
+      },
+      {
+        "date": "2023-10-17T09:30:00Z",
+        "description": "Transfer",
+        "amount": 15000
+      },
+      {
+        "date": "2023-10-19T11:30:00Z",
+        "description": "Groceries",
+        "amount": 600
+      },
+      {
+        "date": "2023-10-21T07:00:00Z",
+        "description": "Utilities",
+        "amount": 4500
+      }
+    ]
+  }
+]
