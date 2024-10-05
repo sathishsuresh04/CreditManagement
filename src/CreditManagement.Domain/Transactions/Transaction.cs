@@ -7,12 +7,13 @@ namespace CreditManagement.Domain.Transactions;
 public class Transaction : Entity, IAuditableEntity
 {
     private const decimal AnomalousThreshold = 10000m;
+
     private Transaction()
     {
     }
 
     private Transaction(DateTime dateTime, decimal amount,
-        string? description, TransactionCategory category,Guid accountId) : base(Guid.NewGuid())
+        string? description, TransactionCategory category, Guid accountId) : base(Guid.NewGuid())
     {
         Date = Guard.Against.Default(dateTime);
         Amount = Guard.Against.NegativeOrZero(amount);
@@ -26,16 +27,16 @@ public class Transaction : Entity, IAuditableEntity
     public DateTime Date { get; private set; }
     public string? Description { get; private set; }
     public decimal Amount { get; private set; }
-    
+
     public bool IsAnomalous { get; private set; }
     public TransactionCategory Category { get; private set; }
     public DateTime CreatedOnUtc { get; }
     public DateTime? ModifiedOnUtc { get; }
 
-    public static Transaction Create(DateTime dateTime, decimal amount, string? description,Guid accountId)
+    public static Transaction Create(DateTime dateTime, decimal amount, string? description, Guid accountId)
     {
         var category = CategorizeTransaction(description);
-        var transaction = new Transaction(dateTime, amount, description, category,accountId);
+        var transaction = new Transaction(dateTime, amount, description, category, accountId);
         return transaction;
     }
 
@@ -48,13 +49,14 @@ public class Transaction : Entity, IAuditableEntity
             ? TransactionCategory.InternalTransfer
             : TransactionCategory.Expense; // Default to Expense if no other category matches
     }
+
     private static bool CheckForAnomaly(decimal amount)
     {
         return amount > AnomalousThreshold;
     }
 
     /// <summary>
-    /// Marks the transaction as anomalous.
+    ///     Marks the transaction as anomalous.
     /// </summary>
     public void SetAnomaly()
     {

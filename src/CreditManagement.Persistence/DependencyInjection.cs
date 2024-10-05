@@ -53,7 +53,7 @@ public static class DependencyInjection
             serviceProvider => serviceProvider.GetRequiredService<CreditManagementDbContext>());
         services.AddScoped<IAccountRepository, AccountRepository>();
         services.AddScoped<ITransactionRepository, TransactionRepository>();
-        
+
         return services;
     }
 

@@ -25,10 +25,10 @@ public class Result<TValue> : Result
     /// </summary>
     /// <returns>The result value if the result is successful.</returns>
     /// <exception cref="InvalidOperationException"> when <see cref="Result.IsFailure" /> is true.</exception>
-    public TValue Value => IsSuccess ?
-                               _value! :
-                               throw new InvalidOperationException(
-                                   "The value of a failure result can not be accessed.");
+    public TValue Value => IsSuccess
+        ? _value!
+        : throw new InvalidOperationException(
+            "The value of a failure result can not be accessed.");
 
     public static implicit operator Result<TValue>(TValue? value)
     {

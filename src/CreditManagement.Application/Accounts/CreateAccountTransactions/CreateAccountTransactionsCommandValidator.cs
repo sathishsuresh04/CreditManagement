@@ -46,26 +46,22 @@ public class CreateAccountTransactionsCommandValidator : AbstractValidator<Creat
         }
     }
 
-    private bool HaveValidAccounts(CreateAccountTransactionsCommand command, string accountDetails, ValidationContext<CreateAccountTransactionsCommand> context)
+    private bool HaveValidAccounts(CreateAccountTransactionsCommand command, string accountDetails,
+        ValidationContext<CreateAccountTransactionsCommand> context)
     {
         try
         {
             var accounts = JsonSerializer.Deserialize<List<AccountRequestDto>>(accountDetails, _jsonSerializerOptions);
-            if (accounts == null || accounts.Count == 0)
-            {
-                return false;
-            }
+            if (accounts == null || accounts.Count == 0) return false;
 
             var isValid = true;
             var accountValidator = new AccountDtoValidator();
 
-            foreach (var result in accounts.Select(account => accountValidator.Validate(account)).Where(result => !result.IsValid))
+            foreach (var result in accounts.Select(account => accountValidator.Validate(account))
+                         .Where(result => !result.IsValid))
             {
                 isValid = false;
-                foreach (var error in result.Errors)
-                {
-                    context.AddFailure(error.PropertyName, error.ErrorMessage);
-                }
+                foreach (var error in result.Errors) context.AddFailure(error.PropertyName, error.ErrorMessage);
             }
 
             return isValid;

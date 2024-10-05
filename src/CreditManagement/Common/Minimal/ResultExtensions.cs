@@ -14,26 +14,26 @@ public static class ResultExtensions
             result.Error.Message,
             statusCode: GetStatusCode(result.Error.Type),
             extensions: new Dictionary<string, object?>
-                        {
-                            {
-                                "errors", new[]
-                                          {
-                                              result.Error,
-                                          }
-                            },
-                        });
+            {
+                {
+                    "errors", new[]
+                    {
+                        result.Error
+                    }
+                }
+            });
 
         static int GetStatusCode(ErrorType errorType)
         {
             return errorType switch
-                   {
-                       ErrorType.Validation => StatusCodes.Status400BadRequest,
-                       ErrorType.NotFound => StatusCodes.Status404NotFound,
-                       ErrorType.Conflict => StatusCodes.Status409Conflict,
-                       ErrorType.Unauthorized => StatusCodes.Status401Unauthorized,
-                       ErrorType.Forbidden => StatusCodes.Status403Forbidden,
-                       _ => StatusCodes.Status500InternalServerError,
-                   };
+            {
+                ErrorType.Validation => StatusCodes.Status400BadRequest,
+                ErrorType.NotFound => StatusCodes.Status404NotFound,
+                ErrorType.Conflict => StatusCodes.Status409Conflict,
+                ErrorType.Unauthorized => StatusCodes.Status401Unauthorized,
+                ErrorType.Forbidden => StatusCodes.Status403Forbidden,
+                _ => StatusCodes.Status500InternalServerError
+            };
         }
     }
 }

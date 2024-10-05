@@ -7,5 +7,4 @@ public record MonthlyReportDto(
     List<CategoryTransactionCount> CategoryTransactionCounts,
     List<TransactionResponseDto> FlaggedTransactions);
 
-
 public record CategoryTransactionCount(string Category, int Count);

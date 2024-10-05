@@ -8,15 +8,16 @@ namespace CreditManagement.Domain.Accounts;
 
 public class Account : AggregateRoot, IAuditableEntity, ISoftDeletableEntity
 {
-    const decimal AnomalousThreshold = 10000m;
-    private Account(string accountNumber, string accountHolder,decimal balance) : base(
+    private const decimal AnomalousThreshold = 10000m;
+    private readonly List<Transaction> _transactions = [];
+
+    private Account(string accountNumber, string accountHolder, decimal balance) : base(
         Guid.NewGuid())
     {
         AccountNumber = Guard.Against.NullOrWhiteSpace(accountNumber);
         AccountHolder = Guard.Against.NullOrWhiteSpace(accountHolder);
         Balance = Guard.Against.NegativeOrZero(balance);
     }
-    private readonly List<Transaction> _transactions = [];
 
     public string AccountNumber { get; private set; }
     public string AccountHolder { get; private set; }
@@ -27,19 +28,16 @@ public class Account : AggregateRoot, IAuditableEntity, ISoftDeletableEntity
     public DateTime? DeletedOnUtc { get; }
     public bool Deleted { get; }
 
-    public static Account Create(string accountNumber, string accountHolder,decimal balance)
+    public static Account Create(string accountNumber, string accountHolder, decimal balance)
     {
         var invoice = new Account(accountNumber, accountHolder, balance);
-       // invoice.AddDomainEvent(new AccountCreatedEvent(invoice)); // publish domain event
+        // invoice.AddDomainEvent(new AccountCreatedEvent(invoice)); // publish domain event
         return invoice;
     }
 
     public Result UpdateAccountHolder(string accountHolder)
     {
-        if (accountHolder != AccountHolder)
-        {
-            AccountHolder = accountHolder;
-        }
+        if (accountHolder != AccountHolder) AccountHolder = accountHolder;
 
         return Result.Success();
     }
@@ -52,21 +50,17 @@ public class Account : AggregateRoot, IAuditableEntity, ISoftDeletableEntity
 
     public Result IsAnomalyTransaction(DateTime date, decimal amount, string description)
     {
-
         var isDuplicate = _transactions.Any(t => t.Date == date && t.Amount == amount && t.Description == description);
         var isAboveThreshold = amount > AnomalousThreshold;
 
-        if (isDuplicate || isAboveThreshold)
-        {
-            return Result.Success();
-        }
-        return Result.Failure(Error.Validation("","Transaction is not anomalous"));
+        if (isDuplicate || isAboveThreshold) return Result.Success();
+        return Result.Failure(Error.Validation("", "Transaction is not anomalous"));
     }
+
     public Result AddTransaction(Transaction transaction)
     {
-     
-            _transactions.Add(transaction);
-            
+        _transactions.Add(transaction);
+
         return Result.Success();
     }
 }

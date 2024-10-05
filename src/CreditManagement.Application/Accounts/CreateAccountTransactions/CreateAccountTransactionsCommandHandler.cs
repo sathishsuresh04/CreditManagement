@@ -9,16 +9,17 @@ using CreditManagement.Domain.Transactions;
 
 namespace CreditManagement.Application.Accounts.CreateAccountTransactions;
 
-
 public class CreateAccountTransactionsCommandHandler : ICommandHandler<CreateAccountTransactionsCommand, Result>
 {
     private readonly IAccountRepository _accountRepository;
-    private readonly ITransactionRepository _transactionRepository;
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions
+
+    private readonly JsonSerializerOptions _jsonSerializerOptions = new()
     {
         PropertyNameCaseInsensitive = true
     };
+
+    private readonly ITransactionRepository _transactionRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
     public CreateAccountTransactionsCommandHandler(
         IAccountRepository accountRepository,
@@ -32,12 +33,10 @@ public class CreateAccountTransactionsCommandHandler : ICommandHandler<CreateAcc
 
     public async Task<Result> Handle(CreateAccountTransactionsCommand request, CancellationToken cancellationToken)
     {
-        var lstAccountDtos = JsonSerializer.Deserialize<List<AccountRequestDto>>(request.AccountDetails, _jsonSerializerOptions);
+        var lstAccountDtos =
+            JsonSerializer.Deserialize<List<AccountRequestDto>>(request.AccountDetails, _jsonSerializerOptions);
 
-        if (lstAccountDtos == null)
-        {
-            return Result.Failure(Error.Validation("Accounts.Invalid", "Invalid JSON data."));
-        }
+        if (lstAccountDtos == null) return Result.Failure(Error.Validation("Accounts.Invalid", "Invalid JSON data."));
 
         foreach (var accountDto in lstAccountDtos)
         {
@@ -88,13 +87,12 @@ public class CreateAccountTransactionsCommandHandler : ICommandHandler<CreateAcc
     {
         foreach (var transactionDto in transactions)
         {
-            var transaction = Transaction.Create(transactionDto.Date, transactionDto.Amount, transactionDto.Description, account.Id);
-            var resultIsAnomaly = account.IsAnomalyTransaction(transactionDto.Date, transactionDto.Amount, transactionDto.Description);
+            var transaction = Transaction.Create(transactionDto.Date, transactionDto.Amount, transactionDto.Description,
+                account.Id);
+            var resultIsAnomaly =
+                account.IsAnomalyTransaction(transactionDto.Date, transactionDto.Amount, transactionDto.Description);
 
-            if (resultIsAnomaly.IsSuccess)
-            {
-                transaction.SetAnomaly();
-            }
+            if (resultIsAnomaly.IsSuccess) transaction.SetAnomaly();
 
             account.AddTransaction(transaction);
             _transactionRepository.Insert(transaction);

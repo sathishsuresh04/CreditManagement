@@ -1,7 +1,7 @@
 @model IEnumerable<CreditManagement.Application.Dtos.TransactionResponseDto>
 
 @{
-ViewData["Title"] = "Transactions";
+    ViewData["Title"] = "Transactions";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -19,13 +19,13 @@ ViewData["Title"] = "Transactions";
     <tbody>
     @foreach (var transaction in Model)
     {
-    <tr class="@(transaction.IsFlagged ? "table-warning" : "")">
-        <td>@transaction.Description</td>
-        <td>@transaction.Date.ToString("d")</td>
-        <td>@transaction.Amount</td>
-        <td>@transaction.Category</td>
-        <td>@transaction.IsFlagged</td>
-    </tr>
+        <tr class="@(transaction.IsFlagged ? "table-warning" : "")">
+            <td>@transaction.Description</td>
+            <td>@transaction.Date.ToString("d")</td>
+            <td>@transaction.Amount</td>
+            <td>@transaction.Category</td>
+            <td>@transaction.IsFlagged</td>
+        </tr>
     }
     </tbody>
 </table>

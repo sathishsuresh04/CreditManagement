@@ -12,13 +12,9 @@ public class AccountController(IMediator mediator) : Controller
     public async Task<IActionResult> IndexAsync()
     {
         var result = await mediator.Send(new GetAllAccountsQuery());
-        if (result.IsSuccess)
-        {
-            return View(result.Value);
-        }
+        if (result.IsSuccess) return View(result.Value);
 
         return BadRequest(result.Error);
-
     }
 
     [HttpPost]
@@ -40,22 +36,18 @@ public class AccountController(IMediator mediator) : Controller
     public async Task<IActionResult> ViewTransactionsAsync(Guid accountId)
     {
         var result = await mediator.Send(new GetAccountTransactionsQuery(accountId));
-        if (result.IsSuccess)
-        {
-            return View(result.Value);
-        }
+        if (result.IsSuccess) return View(result.Value);
 
         return BadRequest(result.Error);
     }
-    
+
     [HttpGet("{accountId}/{month}/{year}")]
-    public async Task<IActionResult> ReportsAsync(Guid accountId, int month, int year, CancellationToken cancellationToken)
+    public async Task<IActionResult> ReportsAsync(Guid accountId, int month, int year,
+        CancellationToken cancellationToken)
     {
-        var result = await mediator.Send(new GetMonthlyTransactionReportQuery(accountId,month,year), cancellationToken);
-        if (result.IsSuccess)
-        {
-            return View(result.Value);
-        }
+        var result = await mediator.Send(new GetMonthlyTransactionReportQuery(accountId, month, year),
+            cancellationToken);
+        if (result.IsSuccess) return View(result.Value);
 
         return BadRequest(result.Error);
     }

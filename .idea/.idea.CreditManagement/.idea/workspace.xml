@@ -10,9 +10,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a31711-1b4f-4eb9-b984-485915f18664" name="Changes" comment="fix: inital implemenation version">
+    <list default="true" id="f1a31711-1b4f-4eb9-b984-485915f18664" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Domain.Tests/AccountTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Domain.Tests/TransactionTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Persistence.Tests/AccountRepositoryTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Shared.Tests/Fixure/AccountTestFixture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CreditManagement.Shared.Tests/Fixure/TransactionTestFixture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CreditManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CreditManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditManagement.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CreditManagement.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/TransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditManagement.Persistence/Repositories/TransactionRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +37,12 @@
     &quot;assignee&quot;: &quot;sathishsuresh04&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sathishsuresh04/CreditManagement.git",
-    "accountId": "f1ecf13a-9a97-4929-b646-122042d974af"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sathishsuresh04/CreditManagement.git&quot;,
+    &quot;accountId&quot;: &quot;f1ecf13a-9a97-4929-b646-122042d974af&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
@@ -45,50 +51,8 @@
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.config/dotnet-tools.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/CreditManagement/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/CreditManagement/Views/Shared/_ValidationScriptsPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/CreditManagement/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/sureshkumar/Documents/SelfG/Repos/Github/KreditzDashboard/src/CreditManagement/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86f8ac285084484da0b538d2c421787227c00/d3/d768029a/SubstituteExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_8_recommended.globalconfig" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevelglobalization_8_none.globalconfig" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -111,12 +75,14 @@
     &quot;.NET Launch Settings Profile.KreditzDashboard: http.executor&quot;: &quot;Debug&quot;,
     &quot;.NET Launch Settings Profile.KreditzDashboard: https (1).executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;cd3ba041-3677-4ab8-bd4e-ac5757525922.executor&quot;: &quot;Debug&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -224,7 +190,8 @@
       <workItem from="1727768854286" duration="3543000" />
       <workItem from="1727773919499" duration="557000" />
       <workItem from="1727774773535" duration="3542000" />
-      <workItem from="1728022963006" duration="26320000" />
+      <workItem from="1728022963006" duration="30088000" />
+      <workItem from="1728128302106" duration="2843000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial draft version">
       <option name="closed" value="true" />
@@ -274,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728060327543</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix: transaction category is updated">
+      <option name="closed" value="true" />
+      <created>1728060758502</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728060758502</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +277,8 @@
     <MESSAGE value="fix: removed bin and obj" />
     <MESSAGE value="fix: added migrations" />
     <MESSAGE value="fix: inital implemenation version" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: inital implemenation version" />
+    <MESSAGE value="fix: transaction category is updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: transaction category is updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -314,6 +290,25 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs</url>
+          <line>12</line>
+          <properties documentPath="$PROJECT_DIR$/src/CreditManagement.Application/Transactions/GetMonthlyTransactionReport/GetMonthlyTransactionReportQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="750" />
+            </startOffsets>
+            <endOffsets>
+              <option value="789" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+          <properties exception="System.ArgumentException" isInternal="false" displayValue="ArgumentException" namespaceName="System">
+            <option name="internal" value="false" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

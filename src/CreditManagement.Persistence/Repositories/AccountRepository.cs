@@ -9,13 +9,6 @@ public sealed class AccountRepository(IDbContext dbContext)
     : GenericRepository<Account>(dbContext), IAccountRepository
 
 {
-    public Task<Account?> GetAccountByIdWithTransactionsAsync(Guid accountId)
-    {
-        return DbContext.Set<Account>()
-            .Include(a => a.Transactions)
-            .FirstOrDefaultAsync(a => a.Id == accountId);
-    }
-
     public Task<List<Account>> GetAllAccountsWithTransactionsAsync()
     {
         return DbContext.Set<Account>()
@@ -23,20 +16,29 @@ public sealed class AccountRepository(IDbContext dbContext)
             .ToListAsync();
     }
 
- 
+
     public Task<List<Account>> GetAccountsAsync()
     {
         return DbContext.Set<Account>()
             .ToListAsync();
     }
-    public  Task<Account?> GetAccountByAccountNumberAsync(string accountNumber)
+
+    public Task<Account?> GetAccountByAccountNumberAsync(string accountNumber)
     {
-        return  DbContext.Set<Account>()
+        return DbContext.Set<Account>()
             .Include(a => a.Transactions)
             .FirstOrDefaultAsync(a => a.AccountNumber == accountNumber);
     }
+
     public Task<bool> AnyAsync()
     {
         return base.AnyAsync(new AccountSpecification());
+    }
+
+    public Task<Account?> GetAccountByIdWithTransactionsAsync(Guid accountId)
+    {
+        return DbContext.Set<Account>()
+            .Include(a => a.Transactions)
+            .FirstOrDefaultAsync(a => a.Id == accountId);
     }
 }

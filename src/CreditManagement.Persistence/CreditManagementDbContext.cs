@@ -42,7 +42,7 @@ public class CreditManagementDbContext(
     {
         return id == Guid.Empty ? null : await Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id);
     }
-    
+
 
     /// <inheritdoc />
     public void Insert<TEntity>(TEntity entity)
@@ -58,6 +58,7 @@ public class CreditManagementDbContext(
     {
         Set<TEntity>().AddRange(entities);
     }
+
     public void Update<TEntity>(TEntity entity) where TEntity : Entity
     {
         Set<TEntity>().Update(entity);
