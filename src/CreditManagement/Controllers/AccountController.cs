@@ -9,6 +9,10 @@ namespace CreditManagement.Controllers;
 
 public class AccountController(IMediator mediator) : Controller
 {
+    /// <summary>
+    /// Retrieves a list of all accounts asynchronously and returns the result as a view.
+    /// </summary>
+    /// <returns>An <see cref="IActionResult"/> representing the result of the operation.</returns>
     public async Task<IActionResult> IndexAsync()
     {
         var result = await mediator.Send(new GetAllAccountsQuery());
@@ -17,6 +21,11 @@ public class AccountController(IMediator mediator) : Controller
         return BadRequest(result.Error);
     }
 
+    /// <summary>
+    /// Handles the upload of a JSON file, processes its content to create account transactions asynchronously,
+    /// and returns the appropriate result.
+    /// </summary>
+    /// <returns>An <see cref="IActionResult"/> indicating the result of the upload and processing operation.</returns>
     [HttpPost]
     public async Task<IActionResult> UploadJsonFileAsync()
     {
